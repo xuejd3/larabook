@@ -1,0 +1,29 @@
+{
+    "name": "xuejd3/larabook",
+    "description": "Beautiful document tool for your project.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "xuejd3",
+            "email": "xuejd3@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^6.0",
+        "erusev/parsedown-extra": "^0.7.1",
+        "symfony/dom-crawler": "^5.0",
+        "xuejd3/laravel-emoji": "^0.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xuejd3\\LaraBook\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Xuejd3\\LaraBook\\LaraBookServiceProvider"
+            ]
+        }
+    }
+}
