@@ -21,6 +21,17 @@
       </div>
     @endif
 
+    <div class="relative mr-4">
+      <select data-version-switcher class="appearance-none block bg-white pl-2 pr-8 py-1 text-gray-500 font-medium text-base focus:outline-none focus:text-gray-800">
+        @foreach($versions as $version)
+          <option value="{{ $version }}" data-href="{{ route('larabook.docs.show', [$version, $page]) }}" {{ $version === $currentVersion ? 'selected' : '' }}>{{ $version }}</option>
+        @endforeach
+      </select>
+      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
+      </div>
+    </div>
+
     <div class="hidden lg:flex items-center justify-end pr-4">
       @if(config('larabook.plugins.docsearch.api_key'))
         @include('larabook::plugins.docsearch')
@@ -37,9 +48,9 @@
     </div>
 
     <div id="nav-close" class="px-6 text-gray-600 self-center hidden lg:hidden">
-        <svg role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current w-6 h-6">
-          <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
-        </svg>
+      <svg role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current w-6 h-6">
+        <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
+      </svg>
     </div>
   </div>
 </header>

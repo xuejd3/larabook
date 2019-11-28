@@ -43,6 +43,8 @@ class LaraBook {
         this.initDocSearch();
       }
     }
+
+    document.querySelector('select[data-version-switcher]').addEventListener('change', this.versionSwitcher);
   }
 
   toggleSidebar () {
@@ -199,6 +201,16 @@ class LaraBook {
       )}</div>`;
       blockquote.classList.add(icon, 'flex', 'rounded-0', 'bg-blue-100', 'border-l-4', 'border-blue-400', 'text-blue-900');
     });
+  }
+
+  versionSwitcher () {
+    let version_select = document.querySelector('select[data-version-switcher]');
+    let index          = version_select.selectedIndex;
+    let href           = version_select.options[index].getAttribute('data-href');
+
+    if (window.location.href != href) {
+      window.location.href = href;
+    }
   }
 }
 

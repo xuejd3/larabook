@@ -1,6 +1,6 @@
 <template>
-  <a :href="url">
-    <svg t="1553491941320" viewBox="0 0 1024 1024" style="height: 30px; width: 30px; fill: currentColor;" version="1.1"
+  <a :href="url" class="block flex items-center text-gray-500 hover:text-gray-700 mr-5" target="_blank">
+    <svg t="1553491941320" viewBox="0 0 1024 1024" class="fill-current w-5 h-5" version="1.1"
          xmlns="http://www.w3.org/2000/svg" p-id="2504"
          xmlns:xlink="http://www.w3.org/1999/xlink">
       <path
