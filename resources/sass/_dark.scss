@@ -1,0 +1,116 @@
+$night-sidebar: #11152C;
+$night-documentation: #191E38;
+$night-navbar: rgb(28, 35, 68);
+$night-search: rgb(40, 47, 82);
+$night-white: #F8FAFC;
+$night-gray: #DAE1E7;
+
+html.night-node {
+  color: $night-white;
+  background-color: $night-documentation;
+}
+
+.night-node {
+  body {
+    color: $night-white;
+    background-color: $night-documentation;
+
+    header {
+      background-color: $night-navbar;
+      border-color: $night-navbar;
+
+      .logo {
+        a {
+          color: $night-gray;
+        }
+      }
+
+      select[data-version-switcher] {
+        background-color: $night-navbar;
+      }
+
+      input#search-input {
+        background-color: $night-search;
+        color: $night-white;
+        border-color: $night-search;
+
+        &:focus {
+          background-color: $night-search;
+          color: $night-white;
+        }
+      }
+    }
+
+    nav#sidebar {
+      background-color: $night-sidebar;
+      border-right: 1px solid $night-sidebar;
+
+      .docs-index {
+        h2 {
+          color: $night-gray;
+          background-color: $night-navbar;
+          border-color: $night-navbar;
+        }
+
+        a {
+          color: $night-white;
+        }
+
+        li.is-active > a {
+          font-weight: 700;
+          color: #4299e1;
+          background-color: $night-navbar;
+        }
+      }
+    }
+
+    div#toc {
+      border-color: $night-sidebar;
+    }
+
+    .markdown-body {
+      color: $night-gray;
+      background-color: $night-documentation;
+
+      h1 {
+        color: $night-white;
+      }
+
+      h2, h3, h4 {
+        color: $night-gray;
+      }
+
+      blockquote {
+        background-color: $night-sidebar;
+        border-color: $night-search;
+      }
+
+      table {
+        background-color: #11152D;
+        color: $night-white;
+
+        tr, td, th {
+          border-width: 1px;
+          border-color: #272e56;
+        }
+
+        tr:hover, td:hover, th:hover {
+          background-color: #1D2244;
+        }
+
+        tr:nth-child(2n) {
+          background-color: $night-search;
+        }
+      }
+
+      pre[class*=language-] {
+        background-color: $night-sidebar;
+        border-color: $night-sidebar;
+      }
+
+      code[class*=language-], pre[class*=language-] {
+        text-shadow: none;
+      }
+    }
+  }
+}
