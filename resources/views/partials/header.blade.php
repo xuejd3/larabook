@@ -21,6 +21,12 @@
       </div>
     @endif
 
+    <div class="hidden lg:flex items-center justify-end pr-4">
+      @if(config('larabook.plugins.docsearch.api_key'))
+        @include('larabook::plugins.docsearch')
+      @endif
+    </div>
+
     <div class="relative mr-4">
       <select data-version-switcher class="appearance-none block bg-white pl-2 pr-8 py-1 text-gray-500 font-medium text-base focus:outline-none focus:text-gray-800">
         @foreach($versions as $version)
@@ -33,9 +39,6 @@
     </div>
 
     <div class="hidden lg:flex items-center justify-end pr-4">
-      @if(config('larabook.plugins.docsearch.api_key'))
-        @include('larabook::plugins.docsearch')
-      @endif
       @if(config('larabook.docs.repository.provider') === 'github')
         <github-link url="{{ config('larabook.docs.repository.url')  }}" class="ml-4"></github-link>
       @endif
