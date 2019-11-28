@@ -10,7 +10,6 @@
 
 namespace Xuejd3\LaraBook\Renders;
 
-use Xuejd3\LaravelEmoji\Emoji;
 use Xuejd3\LaraBook\Contracts\Renderer;
 
 /**
@@ -40,6 +39,6 @@ class Markdown implements Renderer
      */
     public function render(string $content): string
     {
-        return $this->markdown->text(Emoji::shortnameToUnicode($content));
+        return $this->markdown->text(emoji($content));
     }
 }
