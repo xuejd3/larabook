@@ -45,6 +45,7 @@ class LaraBook {
     }
 
     document.querySelector('select[data-version-switcher]').addEventListener('change', this.versionSwitcher);
+    document.querySelector('.switch-checkbox').addEventListener('change', this.darkModeSwitcher);
   }
 
   toggleSidebar () {
@@ -211,6 +212,12 @@ class LaraBook {
     if (window.location.href != href) {
       window.location.href = href;
     }
+  }
+
+  darkModeSwitcher () {
+    let switcher = document.querySelector('.switch-checkbox');
+
+    document.querySelector('html').classList.toggle('night-node');
   }
 }
 

@@ -1,16 +1,18 @@
 <header id="navbar" class="bg-white h-16 z-50 top-0 fixed w-full border-b border-gray-400">
   <div class="max-w-screen-xl mx-auto h-full flex flex-shrink-0 items-center justify-between">
     <div class="logo flex items-center justify-between pr-4 lg:w-1/4 xl:w-1/5 text-2xl font-bold">
-      <a href="{{ url('/') }}" class="block h-full flex items-center ml-4">
+      <a href="{{ url('/') }}" class="block h-full flex items-center mx-4">
         @if(config('larabook.ui.logo'))
           <img src="{{ asset(config('larabook.ui.logo')) }}" alt="Logo" style="height: 30px"/>
         @else
           {{ config('app.name') }}
         @endif
       </a>
-{{--      <div class="hidden lg:block">--}}
-{{--        <dark-mode-switcher class="ml-4"></dark-mode-switcher>--}}
-{{--      </div>--}}
+
+      <div class="switch">
+        <input type="checkbox" name="1" id="1" class="switch-checkbox">
+        <label for="1" class="switch-label"></label>
+      </div>
     </div>
 
     @if(count(config('larabook.ui.nav-links', [])) > 0)
