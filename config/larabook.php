@@ -10,7 +10,7 @@ return [
         'path'            => '/resources/larabook',
 
         // Index page file.
-        'index'           => 'Index.md',
+        'index'           => 'index.md',
 
         // Homepage
         'home'            => 'overview.md',
