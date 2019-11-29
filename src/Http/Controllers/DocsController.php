@@ -60,6 +60,7 @@ class DocsController
             $error['canonical'] = sprintf('%/%s/%s', config('larabook.docs.path'),
                 config('larabook.docs.default_version'), $page);
             $error['currentVersion'] = $version;
+            $error['versions'] = config('larabook.docs.versions');
             $error['fullUrl'] = \sprintf('%s/%s/%s', \config('larabook.route'), $version, $page);
 
             return \response(\view('larabook::errors.404', $error), 404);
