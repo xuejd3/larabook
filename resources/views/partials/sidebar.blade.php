@@ -1,4 +1,4 @@
-<nav id="sidebar" class="hidden absolute z-40 top-16 bg-white w-full border-b -mb-16 lg:-mb-0 lg:static lg:bg-transparent lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0 xl:w-1/5" style="border-right: 1px solid #E6ECF1">
+<nav id="sidebar" class="hidden absolute z-40 top-16 bg-white w-full border-b -mb-16 lg:-mb-0 lg:static lg:bg-transparent lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0 xl:w-1/5"">
   <div class="lg:block lg:relative lg:sticky lg:top-16 overflow-hidden">
     <nav class="overflow-y-auto text-base lg:text-sm sticky?lg:h-(screen-16)">
       <div class="flex -ml-1 mt-6 mb-4 px-4">

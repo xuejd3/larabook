@@ -68,6 +68,10 @@ html.night-node {
       border-color: $night-sidebar;
     }
 
+    .switch-label {
+      border-color: $night-navbar;
+    }
+
     .markdown-body {
       color: $night-gray;
       background-color: $night-documentation;
@@ -80,14 +84,9 @@ html.night-node {
         color: $night-gray;
       }
 
-      blockquote {
-        background-color: $night-sidebar;
-        border-color: $night-search;
-      }
-
       table {
         background-color: #11152D;
-        color: $night-white;
+        color: $night-gray;
 
         tr, td, th {
           border-width: 1px;
@@ -103,13 +102,11 @@ html.night-node {
         }
       }
 
-      pre[class*=language-] {
-        background-color: $night-sidebar;
-        border-color: $night-sidebar;
-      }
-
-      code[class*=language-], pre[class*=language-] {
+      blockquote, code, pre {
+        color: $night-gray;
         text-shadow: none;
+        background-color: $night-sidebar;
+        border-color: $night-search;
       }
     }
   }
