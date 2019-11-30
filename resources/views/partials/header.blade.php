@@ -10,8 +10,8 @@
       </a>
 
       <div class="switch">
-        <input type="checkbox" name="1" id="1" class="switch-checkbox">
-        <label for="1" class="switch-label"></label>
+        <input type="checkbox" id="switch-checkbox" class="switch-checkbox">
+        <label for="switch-checkbox" class="switch-label"></label>
       </div>
     </div>
 

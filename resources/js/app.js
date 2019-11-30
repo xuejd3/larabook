@@ -28,6 +28,7 @@ files.keys().map(key =>
 
 class LaraBook {
   constructor () {
+    this.useDarkMode();
     this.initVueInstances();
     this.reformatContent();
     this.activateCurrentSection();
@@ -215,9 +216,33 @@ class LaraBook {
   }
 
   darkModeSwitcher () {
-    let switcher = document.querySelector('.switch-checkbox');
-
     document.querySelector('html').classList.toggle('night-node');
+
+    if (window.localStorage) {
+      let dark_mode = localStorage.getItem('larabook_dark_mode');
+
+      if (dark_mode == 'yes') {
+        localStorage.removeItem('larabook_dark_mode');
+        document.querySelector('.switch-checkbox').removeAttribute('checked');
+      } else {
+        localStorage.setItem('larabook_dark_mode', 'yes');
+        document.querySelector('.switch-checkbox').setAttribute('checked', 'checked');
+      }
+    }
+  }
+
+  useDarkMode () {
+    if (window.localStorage) {
+      let dark_mode = localStorage.getItem('larabook_dark_mode');
+
+      if (dark_mode == 'yes') {
+        document.querySelector('html').classList.add('night-node');
+        document.querySelector('.switch-checkbox').setAttribute('checked', 'checked');
+      } else {
+        document.querySelector('html').classList.remove('night-node');
+        document.querySelector('.switch-checkbox').removeAttribute('checked');
+      }
+    }
   }
 }
 
