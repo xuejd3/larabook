@@ -18,16 +18,16 @@ use Xuejd3\LaraBook\Contracts\Renderer;
 class Markdown implements Renderer
 {
     /**
-     * @var \ParsedownExtra
+     * @var \Parsedown
      */
     protected $markdown;
 
     /**
      * Markdown constructor.
      *
-     * @param \ParsedownExtra $markdown
+     * @param \Parsedown $markdown
      */
-    public function __construct(\ParsedownExtra $markdown)
+    public function __construct(\Parsedown $markdown)
     {
         $this->markdown = $markdown;
     }
@@ -39,6 +39,8 @@ class Markdown implements Renderer
      */
     public function render(string $content): string
     {
-        return $this->markdown->text(emoji($content));
+        return $this->markdown
+            ->setBreaksEnabled(true) // 启用自动换行
+            ->text(emoji($content));
     }
 }
