@@ -9,22 +9,20 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
-    "dependencies": {
-        "@fullhuman/postcss-purgecss": "^1.2.0",
-        "clipboard": "^2.0.4",
-        "cross-env": "^5.2.1",
-        "css-loader": "^2.1.1",
-        "docsearch.js": "^2.6.2",
-        "laravel-mix": "^4.0.15",
-        "localforage": "^1.7.3",
-        "popper.js": "^1.16.0",
-        "prismjs": "^1.16.0",
+    "devDependencies": {
+        "cross-env": "^5.2",
+        "laravel-mix": "^4.1.4",
         "resolve-url-loader": "2.3.2",
         "sass": "^1.23.7",
-        "sass-loader": "^7.1.0",
-        "tailwindcss": "^1.1.4",
-        "vue": "^2.6.10",
-        "vue-loader": "^15.7.0",
-        "vue-template-compiler": "^2.6.10"
+        "sass-loader": "^7.3.1",
+        "vue": "^2.6.11",
+        "vue-loader": "^15.8.3",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "dependencies": {
+        "clipboard": "^2.0.4",
+        "docsearch.js": "^2.6.3",
+        "prismjs": "^1.17.1",
+        "tailwindcss": "^1.1.4"
     }
 }
