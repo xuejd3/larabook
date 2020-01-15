@@ -75,4 +75,9 @@ return [
     'cache' => [
         'ttl' => env('LARABOOK_CACHE_TTL', 300), // seconds
     ],
+
+    'markdown' => [
+        'html_input'         => 'strip',
+        'allow_unsafe_links' => false,
+    ],
 ];

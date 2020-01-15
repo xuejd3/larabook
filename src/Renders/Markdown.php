@@ -11,6 +11,9 @@
 namespace Xuejd3\LaraBook\Renders;
 
 use Xuejd3\LaraBook\Contracts\Renderer;
+use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\Environment;
+use League\CommonMark\Extras\CommonMarkExtrasExtension;
 
 /**
  * Class Markdown.
@@ -18,29 +21,20 @@ use Xuejd3\LaraBook\Contracts\Renderer;
 class Markdown implements Renderer
 {
     /**
-     * @var \Parsedown
-     */
-    protected $markdown;
-
-    /**
-     * Markdown constructor.
-     *
-     * @param \Parsedown $markdown
-     */
-    public function __construct(\Parsedown $markdown)
-    {
-        $this->markdown = $markdown;
-    }
-
-    /**
      * @param string $content
      *
      * @return string
      */
     public function render(string $content): string
     {
-        return $this->markdown
-            ->setBreaksEnabled(true) // 启用自动换行
-            ->text(emoji($content));
+        $environment = Environment::createCommonMarkEnvironment();
+
+        $environment->addExtension(new CommonMarkExtrasExtension());
+
+        $config = config('larabook.markdown');
+
+        $converter = new CommonMarkConverter($config, $environment);
+
+        return $converter->convertToHtml(emoji($content));
     }
 }
