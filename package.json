@@ -11,10 +11,10 @@
     },
     "devDependencies": {
         "cross-env": "^5.2",
-        "laravel-mix": "^4.1.4",
+        "laravel-mix": "^5.0.1",
         "resolve-url-loader": "2.3.2",
-        "sass": "^1.23.7",
-        "sass-loader": "^7.3.1",
+        "sass": "^1.25.0",
+        "sass-loader": "^8.0.2",
         "vue": "^2.6.11",
         "vue-loader": "^15.8.3",
         "vue-template-compiler": "^2.6.11"
@@ -22,7 +22,7 @@
     "dependencies": {
         "clipboard": "^2.0.4",
         "docsearch.js": "^2.6.3",
-        "prismjs": "^1.18.0",
-        "tailwindcss": "^1.1.4"
+        "prismjs": "^1.19.0",
+        "tailwindcss": "^1.2.0"
     }
 }
