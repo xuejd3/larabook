@@ -11,9 +11,7 @@
 namespace Xuejd3\LaraBook\Renders;
 
 use Xuejd3\LaraBook\Contracts\Renderer;
-use League\CommonMark\CommonMarkConverter;
-use League\CommonMark\Environment;
-use League\CommonMark\Extras\CommonMarkExtrasExtension;
+use League\CommonMark\GithubFlavoredMarkdownConverter;
 
 /**
  * Class Markdown.
@@ -27,13 +25,9 @@ class Markdown implements Renderer
      */
     public function render(string $content): string
     {
-        $environment = Environment::createCommonMarkEnvironment();
-
-        $environment->addExtension(new CommonMarkExtrasExtension());
-
         $config = config('larabook.markdown');
 
-        $converter = new CommonMarkConverter($config, $environment);
+        $converter = new GithubFlavoredMarkdownConverter($config);
 
         return $converter->convertToHtml(emoji($content));
     }
