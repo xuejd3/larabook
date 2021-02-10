@@ -14,5 +14,5 @@
   export default {
     name : 'github-link',
     props: ['url']
-  };
+  }
 </script>

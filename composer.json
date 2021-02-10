@@ -9,8 +9,8 @@
         }
     ],
     "require": {
-        "symfony/dom-crawler": "^5.1",
-        "xuejd3/laravel-emoji": "^0.0.2",
+        "symfony/dom-crawler": "^5.2",
+        "xuejd3/laravel-emoji": "^1.0",
         "league/commonmark": "^1.5"
     },
     "autoload": {
