@@ -25,7 +25,7 @@
     "dependencies": {
         "clipboard": "^2.0.6",
         "docsearch.js": "^2.6.3",
-        "prismjs": "^1.23.0",
+        "prismjs": "^1.27.0",
         "tailwindcss": "^1.9.6"
     }
 }
