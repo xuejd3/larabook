@@ -1,0 +1,65 @@
+.switch {
+  //@apply relative select-none w-12 mr-2 leading-normal;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 3rem;
+  margin-right: .5rem;
+  line-height: 1.5;
+}
+
+.switch-checkbox {
+  //@apply hidden;
+  display: none;
+}
+
+.switch-label {
+  //@apply block overflow-hidden cursor-pointer bg-grey-light rounded-full h-6 shadow-inner border-2 border-white;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #dae1e7;
+  border-radius: 9999px;
+  height: 1.5rem;
+  -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .06);
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .06);
+  border-width: 2px;
+  border-color: #fff;
+  -webkit-transition: background-color .1s ease-in;
+
+  transition: background-color .1s ease-in;
+}
+
+.switch-label:before {
+  //@apply absolute block bg-white border shadow pin-y w-6 rounded-full -ml-1;
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  border-width: 1px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+  top: 0;
+  bottom: 0;
+  width: 1.5rem;
+  border-radius: 9999px;
+  margin-left: -.25rem;
+
+  right: 50%;
+  content: "";
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
+.switch-checkbox:checked + .switch-label {
+  //@apply bg-primary shadow-none;
+  background-color: #2b9cf2;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.switch-checkbox:checked + .switch-label:before {
+  //@apply pin-r;
+  right: 0;
+}
