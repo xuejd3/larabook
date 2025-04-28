@@ -13,9 +13,9 @@ namespace Xuejd3\LaraBook;
 use Illuminate\Contracts\Cache\Repository as Cache;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
+use Symfony\Component\DomCrawler\Crawler;
 use Xuejd3\LaraBook\Contracts\Renderer;
 use Xuejd3\LaraBook\Exceptions\PageNotFoundException;
-use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * Class Documentation.
@@ -26,10 +26,12 @@ class Documentation
      * @var \Illuminate\Filesystem\Filesystem
      */
     protected $filesystem;
+
     /**
      * @var \Xuejd3\LaraBook\Contracts\Render
      */
     protected $renderer;
+
     /**
      * @var \Illuminate\Contracts\Cache\Repository
      */
@@ -37,10 +39,6 @@ class Documentation
 
     /**
      * Documentation constructor.
-     *
-     * @param \Illuminate\Filesystem\Filesystem      $filesystem
-     * @param \Xuejd3\LaraBook\Contracts\Renderer    $renderer
-     * @param \Illuminate\Contracts\Cache\Repository $cache
      */
     public function __construct(Filesystem $filesystem, Renderer $renderer, Cache $cache)
     {
@@ -50,8 +48,6 @@ class Documentation
     }
 
     /**
-     * @param string $version
-     *
      * @return array|null
      */
     public function index(string $version)
@@ -71,10 +67,6 @@ class Documentation
             });
     }
 
-    /**
-     * @param string $version
-     * @param string $page
-     */
     public function get(string $version, string $page)
     {
         if (! $this->has($version, $page)) {
@@ -84,18 +76,12 @@ class Documentation
         return $this->renderer->render($this->content($version, $page));
     }
 
-    /**
-     * @param string $version
-     * @param string $page
-     */
     public function has(string $version, string $page)
     {
         return $this->filesystem->exists($this->path($version, $page));
     }
 
     /**
-     * @param string $page
-     *
      * @return string
      */
     public function path(string $version, string $page)
@@ -104,10 +90,8 @@ class Documentation
     }
 
     /**
-     * @param string $page
-     * @param string $version
-     *
      * @return resource|null
+     *
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function content(string $version, string $page)
@@ -125,9 +109,6 @@ class Documentation
     }
 
     /**
-     * @param string $version
-     * @param string $content
-     *
      * @return mixed
      */
     public function replaceLinks(string $version, string $content)

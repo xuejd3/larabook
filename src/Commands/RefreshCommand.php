@@ -18,18 +18,23 @@ class RefreshCommand extends Command
 {
     /**
      * The name and signature of the console command.
+     *
      * @var string
      */
     protected $signature = 'larabook:refresh';
+
     /**
      * The console command description.
+     *
      * @var string
      */
     protected $description = 'Sync documents and flush the cache.';
+
     /**
      * @var \Illuminate\Contracts\Filesystem\Filesystem
      */
     protected $filesystem;
+
     /**
      * @var array
      */
@@ -48,6 +53,7 @@ class RefreshCommand extends Command
 
     /**
      * Execute the console command.
+     *
      * @return mixed
      */
     public function handle()

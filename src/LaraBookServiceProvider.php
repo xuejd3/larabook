@@ -37,7 +37,7 @@ class LaraBookServiceProvider extends ServiceProvider
     {
         $this->bindContracts();
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/larabook.php', 'larabook'
+            __DIR__.'/../config/larabook.php', 'larabook'
         );
     }
 
@@ -47,7 +47,7 @@ class LaraBookServiceProvider extends ServiceProvider
             return;
         }
 
-        Route::namespace(__NAMESPACE__ . '\Http\Controllers')
+        Route::namespace(__NAMESPACE__.'\Http\Controllers')
             ->middleware(config('larabook.middleware', []))
             ->group(function () {
                 $route = config('larabook.route', 'docs');
@@ -73,62 +73,62 @@ class LaraBookServiceProvider extends ServiceProvider
     protected function registerAssets(): void
     {
         $this->publishes([
-            __DIR__ . '/../public' => public_path('vendor/larabook'),
+            __DIR__.'/../public' => public_path('vendor/larabook'),
         ], 'larabook-assets');
     }
 
     protected function registerViews(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'larabook');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'larabook');
 
         // all
         $this->publishes([
-            __DIR__ . '/../resources/views' => resource_path('views/vendor/larabook'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/larabook'),
         ], 'larabook-views');
 
         // ads
         $this->publishes([
-            __DIR__ . '/../resources/views/ads' => resource_path('views/vendor/larabook/ads'),
+            __DIR__.'/../resources/views/ads' => resource_path('views/vendor/larabook/ads'),
         ], 'larabook-views-ads');
 
         // partials
         $this->publishes([
-            __DIR__ . '/../resources/views/partials' => resource_path('views/vendor/larabook/partials'),
+            __DIR__.'/../resources/views/partials' => resource_path('views/vendor/larabook/partials'),
         ], 'larabook-views-partials');
 
         // plugins
         $this->publishes([
-            __DIR__ . '/../resources/views/plugins' => resource_path('views/vendor/larabook/plugins'),
+            __DIR__.'/../resources/views/plugins' => resource_path('views/vendor/larabook/plugins'),
         ], 'larabook-views-plugins');
 
         // errors
         $this->publishes([
-            __DIR__ . '/../resources/views/plugins' => resource_path('views/vendor/larabook/errors'),
+            __DIR__.'/../resources/views/plugins' => resource_path('views/vendor/larabook/errors'),
         ], 'larabook-views-errors');
 
         // docs
         $this->publishes([
-            __DIR__ . '/../resources/views/docs.blade.php' => resource_path('views/vendor/larabook/docs.blade.php'),
+            __DIR__.'/../resources/views/docs.blade.php' => resource_path('views/vendor/larabook/docs.blade.php'),
         ], 'larabook-views-docs');
 
         // layout
         $this->publishes([
-            __DIR__ . '/../resources/views/layout.blade.php' => resource_path('views/vendor/larabook/layout.blade.php'),
+            __DIR__.'/../resources/views/layout.blade.php' => resource_path('views/vendor/larabook/layout.blade.php'),
         ], 'larabook-views-layout');
     }
 
     protected function registerTranslations(): void
     {
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'larabook');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'larabook');
         $this->publishes([
-            __DIR__ . '/../resources/lang' => resource_path('lang/vendor/larabook'),
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/larabook'),
         ], 'larabook-lang');
     }
 
     protected function registerConfig(): void
     {
         $this->publishes([
-            __DIR__ . '/../config/larabook.php' => \config_path('larabook.php'),
+            __DIR__.'/../config/larabook.php' => \config_path('larabook.php'),
         ], 'larabook-config');
     }
 

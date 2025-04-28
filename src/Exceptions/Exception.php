@@ -13,6 +13,4 @@ namespace Xuejd3\LaraBook\Exceptions;
 /**
  * Class Exception.
  */
-class Exception extends \Exception
-{
-}
+class Exception extends \Exception {}

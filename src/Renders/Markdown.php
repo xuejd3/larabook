@@ -10,19 +10,14 @@
 
 namespace Xuejd3\LaraBook\Renders;
 
-use Xuejd3\LaraBook\Contracts\Renderer;
 use League\CommonMark\GithubFlavoredMarkdownConverter;
+use Xuejd3\LaraBook\Contracts\Renderer;
 
 /**
  * Class Markdown.
  */
 class Markdown implements Renderer
 {
-    /**
-     * @param string $content
-     *
-     * @return string
-     */
     public function render(string $content): string
     {
         $config = config('larabook.markdown');

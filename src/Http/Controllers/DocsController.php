@@ -13,9 +13,9 @@ namespace Xuejd3\LaraBook\Http\Controllers;
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Gate;
+use Symfony\Component\DomCrawler\Crawler;
 use Xuejd3\LaraBook\Documentation;
 use Xuejd3\LaraBook\Exceptions\PageNotFoundException;
-use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * Class DocsController.
@@ -23,6 +23,7 @@ use Symfony\Component\DomCrawler\Crawler;
 class DocsController
 {
     use AuthorizesRequests;
+
     /**
      * @var \Xuejd3\LaraBook\Documentation
      */
@@ -30,8 +31,6 @@ class DocsController
 
     /**
      * DocsController constructor.
-     *
-     * @param \Xuejd3\LaraBook\Documentation $docs
      */
     public function __construct(Documentation $docs)
     {
@@ -71,15 +70,15 @@ class DocsController
             ->diffForHumans();
 
         $data = [
-            'page'           => $page,
-            'title'          => null,
+            'page' => $page,
+            'title' => null,
             'currentVersion' => $version,
-            'index'          => $this->docs->index($version),
-            'versions'       => config('larabook.docs.versions'),
-            'updatedAt'      => $updatedAt,
-            'fullUrl'        => \sprintf('%s/%s/%s', \config('larabook.route'), $version, $page),
-            'editUrl'        => \sprintf('%s/edit/%s/%s.md', \config('larabook.docs.repository.url'), $version, $page),
-            'canonical'      => sprintf('%/%s/%s', config('larabook.docs.path'),
+            'index' => $this->docs->index($version),
+            'versions' => config('larabook.docs.versions'),
+            'updatedAt' => $updatedAt,
+            'fullUrl' => \sprintf('%s/%s/%s', \config('larabook.route'), $version, $page),
+            'editUrl' => \sprintf('%s/edit/%s/%s.md', \config('larabook.docs.repository.url'), $version, $page),
+            'canonical' => sprintf('%/%s/%s', config('larabook.docs.path'),
                 config('larabook.docs.default_version'), $page),
         ];
 

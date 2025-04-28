@@ -7,49 +7,54 @@ return [
 
     'docs' => [
         // Storage path of docs files.
-        'path'            => '/resources/larabook',
+        'path' => '/resources/larabook',
 
         // Index page file.
-        'index'           => 'index.md',
+        'index' => 'index.md',
 
         // Homepage
-        'home'            => 'overview.md',
+        'home' => 'overview.md',
 
         // Versions
-        'versions'        => [
+        'versions' => [
             '1.0',
         ],
         'default_version' => '1.0',
 
         // Docs repository
-        'repository'      => [
+        'repository' => [
             // 'provider' => 'github',
             // 'url' => 'https://github.com/xuejd3/larabook',
         ],
     ],
 
     // UI settings
-    'ui'   => [
-        'logo'      => '', // vendor/larabook/images/logo.png
+    'ui' => [
+        'logo' => '', // vendor/larabook/images/logo.png
         'nav-links' => [
-            //  [
-            //      'url' => '/',
-            //      'label' => 'Home',
-            //      'target' => '_self',
-            //  ],
+            // [
+            //     'url'    => '/',
+            //     'label'  => '首页',
+            //     'target' => '_self',
+            // ],
+            // [
+            //     'url'    => '/docs',
+            //     'label'  => 'API 文档',
+            //     'target' => '_self',
+            // ],
         ],
     ],
 
     // SEO configs
-    'seo'  => [
-        'author'      => 'LaraBook',
+    'seo' => [
+        'author' => 'LaraBook',
         'description' => '',
-        'keywords'    => '',
-        'og'          => [
-            'title'       => '',
-            'type'        => 'article',
-            'url'         => '',
-            'image'       => '',
+        'keywords' => '',
+        'og' => [
+            'title' => '',
+            'type' => 'article',
+            'url' => '',
+            'image' => '',
             'description' => '',
         ],
     ],
@@ -60,7 +65,7 @@ return [
         ],
 
         // Algolia Docsearch
-        'docsearch'        => [
+        'docsearch' => [
             // 'api_key' => '',
             // 'index_name' => '',
             // 'placeholder' => 'Search',
@@ -68,7 +73,7 @@ return [
     ],
 
     'date' => [
-        'format'   => 'Y-m-d H:i:s',
+        'format' => 'Y-m-d H:i:s',
         'timezone' => 'UTC', // Asia/Shanghai
     ],
 
@@ -77,7 +82,7 @@ return [
     ],
 
     'markdown' => [
-        'html_input'         => 'strip',
+        'html_input' => 'strip',
         'allow_unsafe_links' => false,
     ],
 ];

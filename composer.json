@@ -9,9 +9,9 @@
         }
     ],
     "require": {
-        "symfony/dom-crawler": "^5.2",
-        "xuejd3/laravel-emoji": "^1.0",
-        "league/commonmark": "^1.5"
+        "symfony/dom-crawler": "^7.2",
+        "joypixels/emoji-toolkit": "^9.0",
+        "league/commonmark": "^2.6"
     },
     "autoload": {
         "psr-4": {
@@ -24,5 +24,8 @@
                 "Xuejd3\\LaraBook\\LaraBookServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "laravel/pint": "^1.22"
     }
 }

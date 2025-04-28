@@ -17,17 +17,21 @@ class InstallCommand extends Command
 {
     /**
      * The name and signature of the console command.
+     *
      * @var string
      */
     protected $signature = 'larabook:install';
+
     /**
      * The console command description.
+     *
      * @var string
      */
     protected $description = 'Install LaraBook and publish the required files.';
 
     /**
      * Execute the console command.
+     *
      * @return mixed
      */
     public function handle()

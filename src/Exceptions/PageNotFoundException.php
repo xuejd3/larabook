@@ -13,6 +13,4 @@ namespace Xuejd3\LaraBook\Exceptions;
 /**
  * Class PageNotFoundException.
  */
-class PageNotFoundException extends Exception
-{
-}
+class PageNotFoundException extends Exception {}
