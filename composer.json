@@ -10,8 +10,8 @@
     ],
     "require": {
         "symfony/dom-crawler": "^7.2",
-        "joypixels/emoji-toolkit": "^9.0",
-        "league/commonmark": "^2.6"
+        "league/commonmark": "^2.6",
+        "xuejd3/laravel-emoji": "^12.0"
     },
     "autoload": {
         "psr-4": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "173252c9e813996692ab3308463b1d29",
+    "content-hash": "8385f48b39928c81fb102fbf8a788775",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -958,6 +958,62 @@
                 }
             ],
             "time": "2024-09-09T11:45:10+00:00"
+        },
+        {
+            "name": "xuejd3/laravel-emoji",
+            "version": "12.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xuejd3/laravel-emoji.git",
+                "reference": "2e1a9cbe619cc658853c3470895443785b42de88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xuejd3/laravel-emoji/zipball/2e1a9cbe619cc658853c3470895443785b42de88",
+                "reference": "2e1a9cbe619cc658853c3470895443785b42de88",
+                "shasum": ""
+            },
+            "require": {
+                "joypixels/emoji-toolkit": "^9.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.22"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Emoji": "Xuejd3\\LaravelEmoji\\Emoji"
+                    },
+                    "providers": [
+                        "Xuejd3\\LaravelEmoji\\EmojiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Xuejd3\\LaravelEmoji\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "xuejd3",
+                    "email": "xuejd3@gmail.com"
+                }
+            ],
+            "description": "An emojione bridge for Laravel",
+            "support": {
+                "issues": "https://github.com/xuejd3/laravel-emoji/issues",
+                "source": "https://github.com/xuejd3/laravel-emoji/tree/12.0.0"
+            },
+            "time": "2025-04-28T06:26:39+00:00"
         }
     ],
     "packages-dev": [
