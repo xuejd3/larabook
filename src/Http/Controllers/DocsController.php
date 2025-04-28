@@ -56,7 +56,7 @@ class DocsController
         if (! file_exists($this->docs->path($version, $page))) {
             $error['title'] = 'Page Not Found.';
             $error['page'] = $page;
-            $error['canonical'] = sprintf('%/%s/%s', config('larabook.docs.path'),
+            $error['canonical'] = sprintf('%s/%s/%s', config('larabook.docs.path'),
                 config('larabook.docs.default_version'), $page);
             $error['currentVersion'] = $version;
             $error['versions'] = config('larabook.docs.versions');
@@ -78,7 +78,7 @@ class DocsController
             'updatedAt' => $updatedAt,
             'fullUrl' => \sprintf('%s/%s/%s', \config('larabook.route'), $version, $page),
             'editUrl' => \sprintf('%s/edit/%s/%s.md', \config('larabook.docs.repository.url'), $version, $page),
-            'canonical' => sprintf('%/%s/%s', config('larabook.docs.path'),
+            'canonical' => sprintf('%s/%s/%s', config('larabook.docs.path'),
                 config('larabook.docs.default_version'), $page),
         ];
 
