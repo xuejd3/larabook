@@ -24,6 +24,7 @@ class Markdown implements Renderer
 
         $converter = new GithubFlavoredMarkdownConverter($config);
 
-        return $converter->convertToHtml(emoji($content));
+        // return $converter->convertToHtml(emoji($content));
+        return $converter->convert(emoji($content));
     }
 }
