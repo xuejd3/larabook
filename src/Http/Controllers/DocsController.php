@@ -25,7 +25,7 @@ class DocsController
     use AuthorizesRequests;
 
     /**
-     * @var \Xuejd3\LaraBook\Documentation
+     * @var Documentation
      */
     protected $docs;
 

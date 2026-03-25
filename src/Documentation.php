@@ -10,10 +10,13 @@
 
 namespace Xuejd3\LaraBook;
 
+use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Contracts\Cache\Repository as Cache;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 use Symfony\Component\DomCrawler\Crawler;
+use Xuejd3\LaraBook\Contracts\Render;
 use Xuejd3\LaraBook\Contracts\Renderer;
 use Xuejd3\LaraBook\Exceptions\PageNotFoundException;
 
@@ -23,17 +26,17 @@ use Xuejd3\LaraBook\Exceptions\PageNotFoundException;
 class Documentation
 {
     /**
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var Filesystem
      */
     protected $filesystem;
 
     /**
-     * @var \Xuejd3\LaraBook\Contracts\Render
+     * @var Render
      */
     protected $renderer;
 
     /**
-     * @var \Illuminate\Contracts\Cache\Repository
+     * @var Repository
      */
     protected $cache;
 
@@ -92,7 +95,7 @@ class Documentation
     /**
      * @return resource|null
      *
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @throws FileNotFoundException
      */
     public function content(string $version, string $page)
     {
